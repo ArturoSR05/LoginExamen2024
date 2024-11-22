@@ -1,7 +1,8 @@
-package edu.iesam.loginexam1eval
+package edu.iesam.loginexam1eval.data
 
 import android.content.Context
 import com.google.gson.Gson
+import edu.iesam.loginexam1eval.domain.User
 
 class LoginXmlLocalDataSource (private val context: Context) {
 
@@ -46,6 +47,6 @@ class LoginXmlLocalDataSource (private val context: Context) {
     }
 
     fun deleteById(movieId: String){
-        sharedPref.edit().remove(movieId).commit()
+        sharedPref.edit().remove(movieId).apply()
     }
 }
